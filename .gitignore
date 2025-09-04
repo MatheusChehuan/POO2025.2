@@ -1,0 +1,39 @@
+# Eclipse files
+.metadata/
+.settings/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.classpath
+.project
+
+# Build directories
+target/
+build/
+out/
+
+# Logs
+*.log
+
+# Java specific
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE specific
+*.iml
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Maven wrapper
+.mvn/wrapper/maven-wrappe
