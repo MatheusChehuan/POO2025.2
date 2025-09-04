@@ -1,0 +1,22 @@
+package exemplos;
+//1)Faça um programa que percorra números entre 0 e 30 e exiba a quantidade de números pares e impares.
+public class Exercicio1 {
+
+	public static void main(String[] args) {
+		int contpar = 0;
+		int contimpar = 0;
+		for (int i = 0; i <= 30; i++){
+			if (i%2 ==0) {
+				contpar++;
+				//System.out.println(i + " é par");
+			} else {
+				contimpar++;
+				//System.out.println(i + " é impar");
+			}
+		}
+		System.out.println("De um total de 30 numeros.");
+		System.out.println(contpar + " são pares.");
+		System.out.println(contimpar + " são impares.");
+	}
+
+}

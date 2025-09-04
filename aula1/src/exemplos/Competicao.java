@@ -1,0 +1,16 @@
+package exemplos;
+
+public class Competicao {
+
+	public static void main(String[] args) {
+			int idade = 18;
+			double altura = 1.65;
+			//|| = ou e && = e
+			if (idade > 18 || idade > 18) {
+				System.out.println("Competirá");
+			} else {
+				System.out.println("Não competirá");
+			}
+	}
+
+}

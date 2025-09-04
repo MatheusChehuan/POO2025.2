@@ -1,0 +1,10 @@
+package exemplos;
+
+public class Comparar {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

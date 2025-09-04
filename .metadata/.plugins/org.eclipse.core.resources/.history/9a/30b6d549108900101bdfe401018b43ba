@@ -1,0 +1,12 @@
+package exemplos;
+
+public class TesteAluno {
+
+	public static void main(String[] args) {
+		Aluno aluno1 = new Aluno();
+		Aluno aluno2 = new Aluno();
+		
+		System.out.println(aluno1);
+	}
+
+}

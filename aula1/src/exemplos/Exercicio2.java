@@ -1,0 +1,19 @@
+package exemplos;
+
+//2) Faça um programa que percorra todos os número de 1 até 22.
+//Para os números múltiplos de 2, imprima a palavra “Java”, e mostre o total de múltiplos de 2 encontrado.
+
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+		int cont = 0;
+		for (int i = 1; i <= 22; i++) {
+			if (i%2==0) {
+				cont++;
+				System.out.println("java");
+			}
+		}
+		System.out.println("São "+cont+" múltiplos de 2.");
+	}
+
+}

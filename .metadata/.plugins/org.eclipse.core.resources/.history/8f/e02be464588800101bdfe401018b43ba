@@ -1,0 +1,20 @@
+package exemplos;
+
+public class Comparar {
+
+	public static void main(String[] args) {
+		int num1 = 10, num2 = 11;
+		
+		/*if (num1 > num2) {
+			System.out.println("1° é maior.");
+			
+		} else if (num2 > num1) {
+				System.out.println("2° é maior.");
+		} else {
+			System.out.println("numeros iguais.");
+		}*/
+		
+		//ternario
+		System.out.println(num1 > num2 ? "1° é maior.": num2> num1 ? "2° é maior." : "numeros iguais." );
+	}
+}

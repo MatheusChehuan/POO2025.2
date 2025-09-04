@@ -1,0 +1,25 @@
+package exemplos;
+
+public class Conta {
+	//atributos
+	int numero;
+	String titular;
+	double saldo;
+	
+	//comportamentos da classe - métodos
+	
+	//metodo sem retorno
+	public void deposito(double valor) {
+		saldo += /*saldo +*/ valor;
+		System.out.println("Depósito efetuado com sucesso.");
+	}
+	// metodo com retorno
+	public boolean saque(double valor) {
+		if (saldo >= valor) {
+			saldo -= /*saldo -*/ valor;
+			return true;
+		}else {
+			return false;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+package exemplos;
+
+import javax.swing.JOptionPane;
+
+public class TesteSwing {
+
+	public static void main(String[] args) {
+		String num1 = Double.parseDouble(JOptionPane.showInputDialog("Digite o numero 1:"));
+		String num2 = Double.parseDouble(JOptionPane.showInputDialog("Digite o numero 2:"));
+
+		
+	}
+}
