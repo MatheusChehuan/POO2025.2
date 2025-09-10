@@ -5,4 +5,27 @@
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="exemplos.Pessoa"/>
     <fullyQualifiedTypeName name="exemplos.TestePessoa"/>
+    <fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
+    <fullyQualifiedTypeName name="com.sun.tools.javac.parser.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="heranca.Diretor"/>
+    <fullyQualifiedTypeName name="heranca.Gerente"/>
+    <fullyQualifiedTypeName name="heranca.pessoaFisica"/>
+    <fullyQualifiedTypeName name="heranca.PessoaJuridica"/>
+    <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
+    <fullyQualifiedTypeName name="exercicio1.AtletaAmador"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ForkJoinTask"/>
+    <fullyQualifiedTypeName name="revisaoheranca.Anestesista"/>
+    <fullyQualifiedTypeName name="revisaoheranca.Clinica"/>
+    <fullyQualifiedTypeName name="revisaoheranca.controlePagamentos"/>
+    <fullyQualifiedTypeName name="revisaoheranca.TesteImovel"/>
+    <fullyQualifiedTypeName name="revisaoheranca.Imovel"/>
+    <fullyQualifiedTypeName name="associacao.Time"/>
+    <fullyQualifiedTypeName name="associacao.Atleta"/>
+    <fullyQualifiedTypeName name="aula5exercicios.Contato"/>
+    <fullyQualifiedTypeName name="exercicio2.Proprietario"/>
+    <fullyQualifiedTypeName name="exercicio2.Imovel"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="exercicio2.Casa"/>
+    <fullyQualifiedTypeName name="aula6exercicios.Atleta"/>
 </qualifiedTypeNameHistroy>
