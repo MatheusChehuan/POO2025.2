@@ -21,10 +21,11 @@ public class FuncionarioDAO {
 		String sql = "insert into funcionario(nome,cpf,dataNascimento,salarioBruto) values (?,?,?,?)";
 	try {
 		PreparedStatement stmt = connection.prepareStatement(sql);
-		stmt.setString(1, funcionario.getNome());
-		stmt.setString(2, funcionario.getCpf());
-		stmt.setDate(3, java.sql.Date.valueOf(funcionario.getDataNascimento())); //chatgpt que me deu a dica
-		stmt.setDouble(4, funcionario.getSalarioBruto());
+		stmt.setInt(1, funcionario.getId());
+		stmt.setString(2, funcionario.getNome());
+		stmt.setString(3, funcionario.getCpf());
+		stmt.setDate(4, java.sql.Date.valueOf(funcionario.getDataNascimento())); //chatgpt que me deu a dica
+		stmt.setDouble(5, funcionario.getSalarioBruto());
 		
 		stmt.execute();
 		stmt.close(); //talvez esteja errado
@@ -40,10 +41,11 @@ public class FuncionarioDAO {
 		String sql = "update funcionario set nome=?, cpf=?, dataNascimento=?, salarioBruto=? where id =?";
 	try {
 		PreparedStatement stmt = connection.prepareStatement(sql);
-		stmt.setString(1, funcionario.getNome());
-		stmt.setString(2, funcionario.getCpf());
-		stmt.setDate(3, java.sql.Date.valueOf(funcionario.getDataNascimento()));
-		stmt.setDouble(4, funcionario.getSalarioBruto());
+		stmt.setInt(1, funcionario.getId());
+		stmt.setString(2, funcionario.getNome());
+		stmt.setString(3, funcionario.getCpf());
+		stmt.setDate(4, java.sql.Date.valueOf(funcionario.getDataNascimento()));
+		stmt.setDouble(5, funcionario.getSalarioBruto());
 		
 		stmt.execute();
 		stmt.close();//talvez esteja errado
@@ -75,7 +77,8 @@ public class FuncionarioDAO {
 				
 				while(rs.next()) {
 					funcionarios.add(new Funcionario
-							(rs.getString("nome"),
+							(rs.getInt("id"),
+							rs.getString("nome"),
 							rs.getString("cpf"),
 							rs.getDate("dataNascimento").toLocalDate(),
 							rs.getDouble("salarioBruto")));

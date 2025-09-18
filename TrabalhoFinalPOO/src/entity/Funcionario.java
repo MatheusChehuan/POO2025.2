@@ -16,8 +16,8 @@ public class Funcionario extends Pessoa implements SalarioCalculavel {
 	
 	private Set<Dependente> dependentes = new HashSet<>();
 
-	public Funcionario(String nome, String cpf, LocalDate dataNascimento, double salarioBruto) {
-		super(nome, cpf, dataNascimento);
+	public Funcionario(int id, String nome, String cpf, LocalDate dataNascimento, double salarioBruto) {
+		super(id, nome, cpf, dataNascimento);
 		this.salarioBruto = salarioBruto;
 	}
 

@@ -36,13 +36,14 @@ import entity.Funcionario;
 
 
 				    String[] dados = linha.split(";");
-				    String nome = dados[0];
-				    String cpf = dados[1];
+				    int id = int.parseInt(dados[0]);
+				    String nome = dados[1];
+				    String cpf = dados[2];
 					DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
-				    LocalDate dataNasc = LocalDate.parse(dados[2], formatter);
-				    double salarioBruto = Double.parseDouble(dados[3]);
+				    LocalDate dataNasc = LocalDate.parse(dados[3], formatter);
+				    double salarioBruto = Double.parseDouble(dados[4]);
 
-				    Funcionario funcionario = new Funcionario(nome, cpf, dataNasc, salarioBruto);
+				    Funcionario funcionario = new Funcionario(id, nome, cpf, dataNasc, salarioBruto);
 				    funcionarios.add(funcionario);
 
 				    //adiciona dependentes
@@ -61,13 +62,13 @@ import entity.Funcionario;
 				            linha = linhadep; 
 				            break;
 				        }
-				        
-				        String nomedep = dadosdep[0];
-				        String cpfdep = dadosdep[1];
-				        LocalDate dataNascDep = LocalDate.parse(dadosdep[2], formatter);
-				        Parentesco parentesco = Parentesco.valueOf(dadosdep[3].toUpperCase());
+				        int id_dep = parseInt(dadosdep[0]);
+				        String nomedep = dadosdep[1];
+				        String cpfdep = dadosdep[2];
+				        LocalDate dataNascDep = LocalDate.parse(dadosdep[3], formatter);
+				        Parentesco parentesco = Parentesco.valueOf(dadosdep[4].toUpperCase());
 
-				        Dependente dependente = new Dependente(nomedep, cpfdep, dataNascDep, parentesco);
+				        Dependente dependente = new Dependente(id_dep, nomedep, cpfdep, dataNascDep, parentesco);
 				        
 				        dependentes.add(dependente);
 				        funcionario.AdicionarDependente(dependente);

@@ -77,7 +77,8 @@ public class DependenteDAO {
 				while(rs.next()) { 
 					try {
 						dependentes.add(new Dependente
-								(rs.getString("nome"),
+								(rs.getInt("id"),
+								rs.getString("nome"),
 								rs.getString("cpf"),
 								rs.getDate("dataNascimento").toLocalDate(),
 								Parentesco.valueOf(rs.getString("Parentesco"))

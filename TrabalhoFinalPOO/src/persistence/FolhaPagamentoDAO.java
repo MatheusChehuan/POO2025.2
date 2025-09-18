@@ -19,11 +19,11 @@ public class FolhaPagamentoDAO {
 		connection = new ConnectionFactory().getConnection();
 	}
 	public void inserir(FolhaPagamento fp) {
-		String sql = "insert into FolhaPagamento(codigo,Funcionario,DataPagamento,DescontoINSS,DescontoIR,SalarioLiquido) values (?,?,?,?,?,?)";
+		String sql = "insert into FolhaPagamento(codigo,id_funcionario,data_pagamento,desconto_inss,desconto_ir,salario_liquido) values (?,?,?,?,?,?)";
 		try {
 			PreparedStatement stmt = connection.prepareStatement(sql);
 			stmt.setInt(1, fp.getCodigo());
-			//stmt.setString(2, fp.getFuncionario());
+			stmt.setInt(2, fp.getFuncionario().getId());
 			stmt.setDate(3, java.sql.Date.valueOf(fp.getDataPagamento()));
 			stmt.setDouble(4, fp.getDescontoINSS());
 			stmt.setDouble(5, fp.getDescontoIR());
@@ -43,7 +43,7 @@ public class FolhaPagamentoDAO {
 	try {
 		PreparedStatement stmt = connection.prepareStatement(sql);
 		stmt.setInt(1, fp.getCodigo());
-		//stmt.setString(2, fp.getFuncionario());
+		stmt.setInt(2, fp.getFuncionario().getId());
 		stmt.setDate(3, java.sql.Date.valueOf(fp.getDataPagamento()));
 		stmt.setDouble(4, fp.getDescontoINSS());
 		stmt.setDouble(5, fp.getDescontoIR());
@@ -81,7 +81,7 @@ public class FolhaPagamentoDAO {
 				while(rs.next()) { 
 						fp.add(new FolhaPagamento
 								 (rs.getInt("codigo"),
-								//Funcionario(rs.getString("Funcionario")), //chave estrangeira faz como?
+								//Funcionario funcionario  //chave estrangeira faz como?
 								rs.getDate("DataPagamento").toLocalDate(),
 								rs.getDouble("DescontoINSS"),
 								rs.getDouble("DescontoIR"),
