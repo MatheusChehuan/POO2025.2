@@ -1,7 +1,0 @@
-package exemplos;
-
-public class Pessoa {
-	String nome;
-	double peso, altura;
-
-}
