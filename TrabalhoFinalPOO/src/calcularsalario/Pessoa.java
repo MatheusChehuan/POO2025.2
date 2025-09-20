@@ -8,9 +8,8 @@ public abstract class Pessoa {
 	protected String cpf;
 	protected LocalDate dataNascimento;
 
-	public Pessoa(int id, String nome, String cpf, LocalDate dataNascimento) {
+	public Pessoa( String nome, String cpf, LocalDate dataNascimento) {
 		super();
-		this.id = id;
 		this.nome = nome;
 		this.cpf = cpf;
 		this.dataNascimento = dataNascimento;
@@ -18,7 +17,7 @@ public abstract class Pessoa {
 
 	@Override
 	public String toString() {
-		return "ID:" + id +"Nome: " + nome + "\nCPF: " + cpf + "\nData Nascimento: " + dataNascimento + "\n";
+		return "ID:" + id +"\nNome: " + nome + "\nCPF: " + cpf + "\nData Nascimento: " + dataNascimento + "\n";
 	}
 	public int getId() {
 		return id;

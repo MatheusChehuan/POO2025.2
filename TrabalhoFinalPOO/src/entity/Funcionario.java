@@ -16,11 +16,11 @@ public class Funcionario extends Pessoa implements SalarioCalculavel {
 	
 	private Set<Dependente> dependentes = new HashSet<>();
 
-	public Funcionario(int id, String nome, String cpf, LocalDate dataNascimento, double salarioBruto) {
-		super(id, nome, cpf, dataNascimento);
+	public Funcionario( String nome, String cpf, LocalDate dataNascimento, double salarioBruto) {
+		super( nome, cpf, dataNascimento);
 		this.salarioBruto = salarioBruto;
+		this.dependentes = new HashSet<>();
 	}
-
 
 	@Override
 	//devolvendo já formatado, ver com o william se vai ser relevante
@@ -126,11 +126,13 @@ public class Funcionario extends Pessoa implements SalarioCalculavel {
 	}
 	
 
-	public void AdicionarDependente(Dependente dependente) throws DependenteException {
+	public void adicionarDependente(Dependente dependente) throws DependenteException {
 		try {
-			dependentes.add(dependente);
+			if (this.dependentes.add(dependente)) {
+				System.out.println(dependente.getNome() + " adicionado com sucesso.");
+			}
 		} catch (Exception e) {
-			System.out.println("Não é permitido cpf repetido");
+			System.out.println("Não é permitido cpf repetido, " + dependente.getNome() + "não foi incluído.");
 			}
 	}
 }

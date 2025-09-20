@@ -5,7 +5,6 @@ import java.time.LocalDate;
 import entity.Funcionario;
 
 public class FolhaPagamento {
-	private int codigo;
 	private Funcionario funcionario;
 	private LocalDate dataPagamento;
 	private double descontoINSS;
@@ -13,32 +12,24 @@ public class FolhaPagamento {
 	private double salarioLiquido;
 	
 	
-	public FolhaPagamento(int codigo, Funcionario funcionario, LocalDate dataPagamento, double descontoINSS,
-			double descontoIR, double salarioLiquido) {
+	public FolhaPagamento(Funcionario funcionario, LocalDate dataPagamento) {
 		super();
-		this.codigo = codigo;
 		this.funcionario = funcionario;
 		this.dataPagamento = dataPagamento;
-		this.descontoINSS = descontoINSS;
-		this.descontoIR = descontoIR;
-		this.salarioLiquido = salarioLiquido;
+		this.descontoINSS = funcionario.calcularINSS();
+		this.descontoIR = funcionario.calcularIR();
+		this.salarioLiquido = funcionario.calcularSalarioLiquido();
 	}
 	
 	
 	@Override
 	public String toString() {
-		return "FolhaPagamento [codigo=" + codigo + ", funcionario=" + funcionario + ", dataPagamento=" + dataPagamento
+		return "FolhaPagamento [ funcionario=" + funcionario + ", dataPagamento=" + dataPagamento
 				+ ", descontoINSS=" + descontoINSS + ", descontoIR=" + descontoIR + ", salarioLiquido=" + salarioLiquido
 				+ "]";
 	}
 	
 	
-	public int getCodigo() {
-		return codigo;
-	}
-	public void setCodigo(int codigo) {
-		this.codigo = codigo;
-	}
 	public Funcionario getFuncionario() {
 		return funcionario;
 	}

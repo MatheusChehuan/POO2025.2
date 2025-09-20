@@ -9,8 +9,9 @@ import calcularsalario.Pessoa;
 public class Dependente extends Pessoa {
 	private Parentesco parentesco;
 
-	public Dependente(int id, String nome, String cpf, LocalDate dataNascimento, Parentesco parentesco) throws DependenteException {
-		super(id, nome, cpf, dataNascimento);
+	public Dependente( String nome, String cpf, LocalDate dataNascimento, Parentesco parentesco) throws DependenteException {
+		super( nome, cpf, dataNascimento);
+		this.parentesco = parentesco;
 		if (LocalDate.now().minusYears(18).isBefore(dataNascimento)) {
 
 		} else {
